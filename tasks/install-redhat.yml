@@ -1,0 +1,5 @@
+---
+- name: Install grafana from URL [RHEL/CentOS]
+  yum:
+    name: https://grafanarel.s3.amazonaws.com/builds/grafana-{{grafana_version}}-{{grafana_magic_number}}.{{grafana_arch}}.rpm
+    state: present

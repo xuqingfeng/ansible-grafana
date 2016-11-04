@@ -1,0 +1,14 @@
+---
+- name: Create grafana.ini
+  template:
+    src: grafana.ini.j2
+    dest: /etc/grafana/grafana.ini
+    backup: true
+  notify:
+    - Restart grafana
+
+- name: Start and Enable grafana service
+  service:
+    name: grafana-server
+    state: started
+    enabled: true
