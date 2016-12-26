@@ -11,13 +11,11 @@
 
 ```yaml
 # vars/main.yml
-grafana_version: 3.1.1 # grafana version number
+grafana_package_url: https://grafanarel.s3.amazonaws.com/builds/grafana-4.0.2-1481203731.x86_64.rpm # for version 4.0.2; get from http://grafana.org/download/
 
 # default/main.yml
 # ...
 ```
-
-### Dependencies
 
 ### Example Playbook
 
@@ -26,3 +24,7 @@ grafana_version: 3.1.1 # grafana version number
   roles:
     - xuqingfeng.grafana
 ```
+
+### Docker
+
+[https://github.com/grafana/grafana-docker](https://github.com/grafana/grafana-docker)

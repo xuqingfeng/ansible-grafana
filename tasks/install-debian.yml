@@ -1,5 +1,5 @@
 ---
 - name: Install grafana from URL [Debian/Ubuntu]
   apt:
-    deb: https://grafanarel.s3.amazonaws.com/builds/grafana_{{ grafana_version }}-{{ grafana_magic_number }}_{{ grafana_arch }}.deb
+    deb: "{{ grafana_package_url }}"
     state: present
